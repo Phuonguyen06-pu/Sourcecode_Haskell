@@ -41,8 +41,11 @@ Ví dụ kết quả tìm kiếm:
 C:\Program Files\Dell\DTP\DiagnosticsSubAgent\IPDT\freeglut.dll
 
 Trong đó:
+
 •	freeglut.dll: Tên file thư viện.
+
 •	C:\Program Files\Dell\DTP\DiagnosticsSubAgent\IPDT: Đường dẫn thư mục chứa DLL.
+
 Chỉ lấy đường dẫn thư mục, không lấy tên file DLL.
 ### 5.3. Thêm đường dẫn DLL vào PATH
 Nếu đã xác định được DLL tương thích, nhập lệnh:
