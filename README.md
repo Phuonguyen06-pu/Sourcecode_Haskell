@@ -48,7 +48,7 @@ Trong đó:
 
 Chỉ lấy đường dẫn thư mục, không lấy tên file DLL.
 ### 5.3. Thêm đường dẫn DLL vào PATH
-Nếu đã xác định được DLL tương thích, nhập lệnh:
+Nếu đã xác định được DLL tương thích, nhập lệnh vào terminal của source code:
 
 $env:PATH = "DUONG_DAN_THU_MUC_CHUA_DLL;" + $env:PATH
 
