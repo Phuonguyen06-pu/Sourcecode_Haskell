@@ -1,0 +1,155 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.39.6.
+--
+-- see: https://github.com/sol/hpack
+
+name:           tank-battle
+version:        0.1.0.0
+synopsis:       Tank Battle - Parallel Combat (Haskell, Gloss, parallel, STM, Megaparsec, network)
+build-type:     Simple
+
+library
+  exposed-modules:
+      Bench.Benchmark
+      Bench.LazyDemo
+      Concurrency.StateSync
+      Concurrency.Workers
+      Engine.Collision
+      Engine.Explosion
+      Engine.Floors
+      Engine.Input
+      Engine.Math
+      Engine.ParallelPhysics
+      Engine.Random
+      Engine.Step
+      Levels.Arena
+      Levels.Maps
+      Model.Config
+      Model.Describable
+      Model.Error
+      Model.Hp
+      Model.Types
+      Model.World
+      Net.Client
+      Net.Line
+      Net.Server
+      Parser.ConfigParser
+      Parser.MapParser
+      Parser.Protocol
+      Storage.Files
+      Storage.Save
+      UI.Events
+      UI.Layout
+      UI.Palette
+      UI.Render
+  other-modules:
+      Paths_tank_battle
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -O2
+  build-depends:
+      async
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , gloss
+    , megaparsec
+    , network
+    , parallel
+    , stm
+  default-language: Haskell2010
+
+executable tank-battle-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_tank_battle
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -O2 -threaded -rtsopts -with-rtsopts=-N4 -eventlog
+  build-depends:
+      async
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , gloss
+    , megaparsec
+    , network
+    , parallel
+    , stm
+    , tank-battle
+  default-language: Haskell2010
+
+executable tank-battle-server
+  main-is: Main.hs
+  other-modules:
+      Paths_tank_battle
+  hs-source-dirs:
+      app-server
+  ghc-options: -Wall -O2 -threaded -rtsopts
+  build-depends:
+      async
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , gloss
+    , megaparsec
+    , network
+    , parallel
+    , stm
+    , tank-battle
+  default-language: Haskell2010
+
+test-suite tank-battle-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      ClockSpec
+      CollisionSpec
+      DescribableSpec
+      EventsSpec
+      HpSpec
+      InputSpec
+      LineSpec
+      MapIdSpec
+      MathSpec
+      MechanicsSpec
+      NetworkSpec
+      Parallel.PropertySpec
+      ParserSpec
+      RulesSpec
+      SaveSpec
+      ServerSpec
+      StateSyncSpec
+      Support
+      WorkerSpec
+      Paths_tank_battle
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -O2 -threaded -rtsopts -with-rtsopts=-N4
+  build-depends:
+      QuickCheck
+    , async
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , gloss
+    , hspec
+    , megaparsec
+    , network
+    , parallel
+    , stm
+    , tank-battle
+  default-language: Haskell2010

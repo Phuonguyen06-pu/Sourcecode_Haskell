@@ -1,0 +1,53 @@
+name: tank-battle
+version: 0.1.0.0
+synopsis: Tank Battle - Parallel Combat (Haskell, Gloss, parallel, STM, Megaparsec, network)
+
+dependencies:
+  - base >= 4.7 && < 5
+  - deepseq
+  - parallel
+  - stm
+  - gloss
+  - async
+  - megaparsec
+  - network
+  - filepath
+  - directory
+  - bytestring
+  - containers
+
+ghc-options:
+  - -Wall
+  - -O2
+
+library:
+  source-dirs: src
+
+executables:
+  tank-battle-exe:
+    main: Main.hs
+    source-dirs: app
+    dependencies: [tank-battle]
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - "-with-rtsopts=-N4"
+      - -eventlog
+
+  tank-battle-server:
+    main: Main.hs
+    source-dirs: app-server
+    dependencies: [tank-battle]
+    ghc-options:
+      - -threaded
+      - -rtsopts
+
+tests:
+  tank-battle-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies: [tank-battle, hspec, QuickCheck, directory]
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - "-with-rtsopts=-N4"

@@ -1,0 +1,5 @@
+# Tank Battle - cau hinh luc chay (doc bang Megaparsec, xem Parser/ConfigParser.hs)
+autosave  = 5
+save_file = savegame.txt
+# Bo dau # de gui ket qua tran toi server (chay: stack exec tank-battle-server)
+#report = 127.0.0.1:9000

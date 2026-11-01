@@ -1,0 +1,1 @@
+SaveData {sdBoard = Scoreboard {sbP1Wins = 1, sbP2Wins = 8, sbDraws = 0}, sdLast = Just (Snapshot {snapMap = 2, snapSeconds = 37, snapHp1 = 80, snapHp2 = 100})}

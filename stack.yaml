@@ -1,0 +1,4 @@
+# Cố định snapshot để build tái lập được (reproducibility)
+resolver: lts-22.28
+packages:
+  - .
