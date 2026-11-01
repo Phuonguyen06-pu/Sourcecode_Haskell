@@ -15,7 +15,7 @@ Game bắn xe tăng 2D (Gloss): chơi 2 người, 3 bản đồ đọc từ file
 Menu có 2 nút: **2 PLAYERS**, **HELP**. Sau đó chọn map và PLAY. Phím **M** quay về menu. Bắn có hồi chiêu 20 frame (~0,33 giây). Đạn gây 20 sát thương, gạch vỡ sau 2 phát, thép không vỡ.
 
 ## Hướng dẫn chạy
-- B1: tải source code từ link github sau: 
+- B1: tải source code từ link github sau: https://github.com/Phuonguyen06-pu/Sourcecode_Haskell.git
 - B2: giải nén, mở source code trong vs code
 - B3: mở terminal, chạy lệnh` stack build ` cài GHC và biên dịch các module
 - B4: chạy ` .\run.bat ` để chạy game
