@@ -16,7 +16,7 @@ Menu có 2 nút: **2 PLAYERS**, **HELP**. Sau đó chọn map và PLAY. Phím **
 
 ## Hướng dẫn chạy
 - B1: tải source code từ link github sau: https://github.com/Phuonguyen06-pu/Sourcecode_Haskell.git
-- B2: giải nén, mở source code trong vs code
+- B2: giải nén, mở source code trong vs code, tắt bộ gõ tiếng Việt (chuyển sang E)
 - B3: mở terminal, chạy lệnh` stack build ` cài GHC và biên dịch các module
 - B4: chạy ` .\run.bat ` để chạy game
 
